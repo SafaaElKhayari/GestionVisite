@@ -74,8 +74,9 @@ namespace GestionVisite
             return proche;
         }
 
-        private double Calcul_distance_parcourue()
+        private double Calcul_distance_parcourue(Personne commercial, List<Personne> clients)
         {
+            Visiter(commercial,clients);
             double sum_distance = 0;
             
             for(int i=0; i < ordre.Count-1; i++)
