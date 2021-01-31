@@ -73,5 +73,15 @@ namespace GestionVisite
             }
             return proche;
         }
+
+        private double Calcul_distance_parcourue()
+        {
+            double sum_distance = 0;
+            
+            for(int i=0; i < ordre.Count-1; i++)
+        
+                sum_distance += Helper.Distance(ordre[i], ordre[i + 1]);
+            return sum_distance;
+        }
     }
 }
